@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Preferences</ion-title>
+    <ion-icon
+      name="notifications"
+      slot="end"
+      (click)="notificationModal($event)"
+    ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end" [routerLink]="['/your-order']"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger"
+      >{{totalItemsCart}}</ion-badge
+    >
+    <img
+      slot="end"
+      src="../../../assets/001.JPG"
+      (click)="presentModal($event)"
+    />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header">
+    <h3>What kind of food are you looking for?</h3>
+    <p>You can select two or more preferences</p>
+  </div>
+  <div class="container">
+    <label class="option_item" *ngFor="let item of this.listCategory">
+      <input
+        type="checkbox"
+        class="checkbox"
+        [checked]="item.checked"
+        (click)="preventChange(item)"
+      />
+      <div class="option_inner" [class]="item.color">
+        <div class="tickmark"></div>
+        <div class="name">{{item.name}}</div>
+      </div>
+    </label>
+  </div>
+  <div class="header1">
+    <ion-button (click)="next()" expand="block">Save Preferences</ion-button>
+  </div>
+</ion-content>

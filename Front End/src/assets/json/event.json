@@ -1,0 +1,28 @@
+{
+  "status": "success",
+  "code": 1,
+  "message": "questions found",
+  "document": {
+    "pageno": 1,
+    "pagesize": 10,
+    "total_count": "10",
+    "records": [
+      {
+        "event_id": "1",
+        "title": "Children’s Day 2021",
+        "description": "The celebrations began with prayers to the Almighty to thank Him for all the children in the world and seek His blessings for all. It turned out to be a very special day for the students as they got an opportunity to see their teachers in different roles. They enjoyed watching the teachers perform a humorous skit and sing some melodious songs. A special song and poem presentation by the members of the Student Council added to the festivities.",
+        "startTime": "Fri, 24 Nov 2023 03:15:19 +0700",
+        "endTime": "Fri, 24 Nov 2023 08:15:19 +0700",
+        "img": "https://picsum.photos/200"
+      },
+      {
+        "event_id": "2",
+        "title": "Independence Day Celebrations 2021",
+        "description": "Students delivered speeches on varied topics like the history of freedom struggle, the contribution of our unsung heroes and India’s development over the years. A few students drew a parallel between India’s freedom struggle and the challenges our country is facing due to the pandemic. They also appreciated the hard work put in by the frontline health care workers.",
+        "startTime": "Fri, 24 Nov 2023 03:15:19 +0700",
+        "endTime": "Fri, 24 Nov 2023 08:15:19 +0700",
+        "img": "https://picsum.photos/200"
+      }
+    ]
+  }
+}

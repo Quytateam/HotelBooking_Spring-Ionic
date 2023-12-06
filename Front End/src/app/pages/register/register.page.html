@@ -1,0 +1,127 @@
+<ion-content>
+  <div class="upper">
+    <div class="icon">
+      <ion-icon name="restaurant"></ion-icon>
+    </div>
+    <p id="login">Restaurant Booking App</p>
+  </div>
+  <div class="middle">
+    <div class="box">
+      <form #loginForm="ngForm">
+        <p>Please Register to Your Account</p>
+        <ion-item>
+          <ion-label position="floating">UserName</ion-label>
+          <ion-input
+            type="username"
+            placeholder="username"
+            name="username"
+            #username="ngModel"
+            [(ngModel)]="login.username"
+            required
+            username
+          ></ion-input>
+          <!-- <ion-icon
+            class="ion-align-self-center"
+            slot="end"
+            name="username"
+          ></ion-icon> -->
+        </ion-item>
+        <div *ngIf="username.invalid && username.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px">
+              Please Write Your User Name
+            </h4>
+          </ion-text>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Email Address</ion-label>
+          <ion-input
+            type="email"
+            placeholder="Email"
+            name="email"
+            #email="ngModel"
+            [(ngModel)]="login.email"
+            required
+            email
+          ></ion-input>
+          <ion-icon
+            class="ion-align-self-center"
+            slot="end"
+            name="mail"
+          ></ion-icon>
+        </ion-item>
+        <div *ngIf="email.invalid && email.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px">
+              Please Write Email Address
+            </h4>
+          </ion-text>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input
+            [type]="type ? 'password' : 'text'"
+            placeholder="Password"
+            name="password"
+            #password="ngModel"
+            [(ngModel)]="login.password"
+            required
+          ></ion-input>
+          <ion-icon
+            class="ion-align-self-center"
+            name="eye-outline"
+            slot="end"
+            (click)="changeType()"
+            [name]="type ? 'eye' : 'eye-off'"
+          ></ion-icon>
+        </ion-item>
+
+        <div *ngIf="password.invalid && password.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px">
+              Please Provide Password
+            </h4>
+          </ion-text>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input
+            [type]="type ? 'password' : 'text'"
+            placeholder="Password"
+            name="cpassword"
+            #cpassword="ngModel"
+            [(ngModel)]="login.cpassword"
+            required
+          ></ion-input>
+          <ion-icon
+            class="ion-align-self-center"
+            name="eye-outline"
+            slot="end"
+            (click)="changeType()"
+            [name]="type ? 'eye' : 'eye-off'"
+          ></ion-icon>
+        </ion-item>
+
+        <div *ngIf="cpassword.invalid && cpassword.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px">
+              Please Provide Password
+            </h4>
+          </ion-text>
+        </div>
+
+        <div class="btn">
+          <ion-button (click)="goToHome()" [disabled]="loginForm.invalid"
+            >Login</ion-button
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="navigator">
+    <p (click)="goToLogin()">Already have an Account ? Login Now</p>
+  </div>
+</ion-content>

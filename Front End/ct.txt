@@ -1,0 +1,69 @@
+blog                            done
+
+blog-post                       done
+
+book-achef                      wait error
+
+change-address                  wait
+
+chef-details                    wait
+
+components  - add-address
+            - add-items
+            - address
+            - booking-chef
+            - coupan
+            - email-reset
+            - notifications
+            - phone-verify
+            - profile
+            - thankyou
+
+event-details                   error
+
+events                          done
+
+face-id                         done
+
+faq                             done
+
+filters                         done          Lọc lựa chọn về món ăn
+
+forget-password                 done
+
+galley                          error
+
+login                           done
+
+messages                        done
+
+my-favourite                    done
+
+my-orders                       done
+
+opt-page                        error
+
+payment                         wait    xem xét lại có nên loại bỏ ko
+
+popup         - order
+              - profile-menu
+
+preferences                     done
+
+profile-page                    done
+
+register                        done
+
+search-chef                     done
+
+settings                        done
+
+support                         done
+
+swipper                         done
+
+touch-id                        done
+
+verify-phone                    done
+
+your-order                      done

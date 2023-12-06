@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button
+        color="light"
+        defaultHref="search-chef"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Payment History</ion-title>
+    <ion-icon
+      name="notifications"
+      slot="end"
+      (click)="notificationModal($event)"
+    ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end" [routerLink]="['/your-order']"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger"
+      >{{totalItemsCart}}</ion-badge
+    >
+    <img
+      slot="end"
+      src="../../../assets/001.JPG"
+      (click)="presentModal($event)"
+    />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let payment of payment">
+    <p id="date">{{payment.date | date:'EEE, dd MMM yyyy'}}</p>
+    <div class="upperBox" *ngFor="let item of payment.transactions">
+      <div class="img">
+        <img src="../../../assets/food/{{item.dish.image}}" />
+      </div>
+      <div class="title">{{item.name}}</div>
+      <div class="price">{{item.subTotal}}</div>
+      <div class="transId">Transaction ID: #{{item.id}}</div>
+      <!-- <div class="time">{{item.time}}</div> -->
+      <div class="time">08:25AM</div>
+      <!-- <div class="bank">{{item.bank}}</div> -->
+      <div class="bank">From Momo</div>
+      <div
+        class="status"
+        [ngStyle]="{'color':(item.enable=== 1) ? 'green' : (item.enable=== 2) ? 'red' : 'orange' }"
+      >
+        {{item.enable === 1 ? "SUCCESS": item.enable === 2 ? "FAILED" :
+        "CANCELLED"}}
+      </div>
+    </div>
+  </div>
+</ion-content>

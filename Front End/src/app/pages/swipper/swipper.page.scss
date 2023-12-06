@@ -1,0 +1,69 @@
+/*
+Theme Name: Restaurant Booking App UI in Ionic 6
+Theme URI: https://jswebapp.com
+Author: JSWEBAPP Team
+Author URI: https://jswebapp.com
+Description: One solution for all your hotel management needs.Simplify and automate your daily hotel operations with a highly flexible and feature-rich system.
+Tags: Hotel Mangment App , Ionic  Template , Ionic 6
+Version: 1.2
+Email : santosh@jswebapp.com
+Youtube Tutorials : https://www.youtube.com/channel/UC3IX-HW44irnSEdETDZOWrA
+Facebook Page : https://www.facebook.com/jswebapp
+Pinterest : https://in.pinterest.com/gk0840/_created/
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+ion-slides {
+  height: 100%;
+}
+
+@import "~swiper/css";
+@import "~swiper/css/effect-cube";
+@import "~swiper/css/pagination";
+
+.mySwiper {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  .swiper-slide {
+    img {
+      width: 100%;
+      height: 70%;
+      border-bottom-left-radius: 80px !important;
+      border-bottom-right-radius: 80px !important;
+    }
+  }
+
+  .slider-text {
+    padding: 20px;
+    h2 {
+      text-align: center !important;
+      color: red;
+    }
+    p {
+      color: gray;
+      text-align: justify;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: -50px;
+    z-index: -50;
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+    }
+  }
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}

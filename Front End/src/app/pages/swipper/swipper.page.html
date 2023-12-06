@@ -1,0 +1,119 @@
+
+<ion-content class="">
+  <!-- <ion-slides pager="true">
+    <ion-slide class="ion-padding">
+      <img src="../../../assets/food/001.JPG" >
+
+      <div class="slider-text">
+        <h2>Easy Exchange!</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla ultricies, erat vitae
+          porta consequat.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="skip()">SKIP</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">NEXT</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../../assets/food/002.JPG" >
+
+      <div class="slider-text">
+        <h2>Easy to Use!</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla ultricies, erat vitae
+          porta consequat.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="skip()">SKIP</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">NEXT</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../../assets/food/003.JPG" >
+
+      <div class="slider-text">
+        <h2>Connect with Others</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla ultricies, erat vitae
+          porta consequat.
+        </p>
+      </div>
+
+      <ion-button color="primary">GET STARTED</ion-button>
+    </ion-slide>
+  </ion-slides> -->
+  <swiper #swiper
+  [effect]="'cube'" 
+  [grabCursor]="true" 
+  [cubeEffect]="{
+    shadow: false
+  }" 
+  [pagination]="true" 
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+  class="mySwiper"
+  >
+  
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef2.png" />  
+      <div class="slider-text" >
+        <h2>Personal chefs Close to You</h2>
+
+        <p>
+          Open Kitchen helps thousands of people get an answer to their question “How do I connect with the best Personal chefs ?
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)= "skip()"  >SKIP</ion-button>
+        <ion-button color="primary" fill="clear" (click)= "next()">NEXT</ion-button> 
+        
+      </div>   
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef3.jpg" />
+
+      <div class="slider-text">
+        <h2>Choose your Meal</h2>
+
+        <p>
+          We offer free custom quotes from Personal chefs near you, ready to cater your needs.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="pre()">Previous</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">NEXT</ion-button>
+      </div>   
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef4.png" />
+
+      <div class="slider-text">
+        <h2>Find or Book your Chef</h2>
+
+        <p>
+          You’ll be presented to a list of qualified professionals: reviews, price, everything is included!
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="pre()">Previous</ion-button>
+        <ion-button color="primary" fill="clear" (click)="login()">Go To Login</ion-button>
+      </div> 
+    </ng-template>
+    
+  </swiper>
+
+</ion-content>

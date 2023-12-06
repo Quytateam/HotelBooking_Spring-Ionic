@@ -1,0 +1,47 @@
+/*
+Theme Name: Restaurant Booking App UI in Ionic 6
+Theme URI: https://jswebapp.com
+Author: JSWEBAPP Team
+Author URI: https://jswebapp.com
+Description: One solution for all your hotel management needs.Simplify and automate your daily hotel operations with a highly flexible and feature-rich system.
+Tags: Hotel Mangment App , Ionic  Template , Ionic 6
+Version: 1.2
+Email : santosh@jswebapp.com
+Youtube Tutorials : https://www.youtube.com/channel/UC3IX-HW44irnSEdETDZOWrA
+Facebook Page : https://www.facebook.com/jswebapp
+Pinterest : https://in.pinterest.com/gk0840/_created/
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+ion-header {
+  font-family: "Poppins", sans-serif;
+  ion-icon {
+    font-size: 30px;
+    position: relative;
+    margin-right: 10px;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+
+ion-content {
+  font-family: "Poppins", sans-serif;
+  ion-list {
+    ion-radio-group {
+      ion-item {
+        ion-label {
+          h3 {
+            span {
+              float: right;
+              color: red;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
